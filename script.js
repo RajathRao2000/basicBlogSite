@@ -75,8 +75,9 @@ async function postFormData(event){
 
         })
         .catch((err)=>console.log(err))
-        let cards=document.getElementsByClassName("blog-card")
-        console.log(cards)
+
+        let formBtn=document.getElementById("formBtn")
+        formBtn.innerHTML="POST BLOG"
     }else{
 
         let config={
@@ -129,6 +130,8 @@ async function deleter(event){
 
 async function editer(event){
     event.preventDefault();
+    let formBtn=document.getElementById("formBtn")
+    formBtn.innerHTML="EDIT BLOG"
     updatingUser=true
     if (event.target.classList.contains("edit-btn")) {
       const usrDetails = event.target.parentElement.parentElement;
